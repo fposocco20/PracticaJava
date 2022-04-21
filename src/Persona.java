@@ -11,7 +11,7 @@ public class Persona {
     public void canviarNom(String nom){
         this.nom = nom;
     }
-    public void assignarDni(String dni){
+    public void assignarDni(String dni){//
         if (this.dni == null) {
             this.dni = dni;
         }
