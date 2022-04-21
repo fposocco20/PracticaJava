@@ -21,6 +21,11 @@ public class Persona {
     }
     //funció que retorna nom i dni de la persona
     public String obtenirDades(){
-        return "Aquesta persona es diu "+ this.nom + ", amb DNI: " + this.dni;
+        if (this.dni == null || this.nom == null){
+            return "Error. Aquesta persona no te nom o dni assignats.";
+        }
+        else {
+            return "Aquesta persona es diu " + this.nom + ", amb DNI: " + this.dni;
+        }
     }
 }

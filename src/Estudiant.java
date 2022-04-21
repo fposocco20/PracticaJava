@@ -6,7 +6,7 @@ public class Estudiant extends Persona {
     }
 
     public void posarNota(double nota){
-        if (this.nota >0 && this.nota <= 10) {
+        if (nota > 0.0 && nota < 10.1) {
             this.nota = nota;
         }
         else{
