@@ -11,18 +11,18 @@ public class Persona {
     public void canviarNom(String nom){
         this.nom = nom;
     }
-    public void assignarDni(String dni){
+    public void assignarDni(String dni) throws Exception {
         if (this.dni == null) {
             this.dni = dni;
         }
         else {
-            System.out.println("Error. Ja hi havia un dni assignat a aquesta persona.");
+            throw new Exception("Error. Ja hi havia un dni assignat a aquesta persona.");
         }
     }
     //funció que retorna nom i dni de la persona
-    public String obtenirDades(){
+    public String obtenirDades() throws Exception {
         if (this.dni == null || this.nom == null){
-            return "Error. Aquesta persona no te nom o dni assignats.";
+            throw new Exception("Error. Aquesta persona no te nom o dni assignats.");
         }
         else {
             return "Aquesta persona es diu " + this.nom + ", amb DNI: " + this.dni;

@@ -2,9 +2,9 @@ import java.util.Date;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Persona p = new Persona(); //Instància de Persona
-            String dades = p.obtenirDades();
+            //String dades = p.obtenirDades(); //Excepció 3d
             //System.out.println(dades); //Excepció 3d
 
         Persona p1 = new Persona();
@@ -19,6 +19,10 @@ public class Main {
             e.canviarNom("Fabio");
             e.assignarDni("48220948E");
             e.posarNota(5.3);
+            e.posarNota(7.5);
+            e.posarNota(9.6);
+            e.posarNota(4.2);
+            e.posarNota(7.0);
             //dades = e.obtenirDades();
             //System.out.println(dades);
             //e.posarNota(-1); //Excepció 3c
@@ -46,9 +50,9 @@ public class Main {
 
         Institut i = new Institut();
             i.canviarNom("La Guineueta");
-            i.afegirEstudiant(e);
-            i.afegirProfe(t);
-            i.afegirProfe(subT);
+            i.afegirPersona(e);
+            i.afegirPersona(t);
+            i.afegirPersona(subT);
             i.imprimirInformacio();
 
     }
